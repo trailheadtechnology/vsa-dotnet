@@ -1,4 +1,4 @@
-# Is Everyone AI-ing Without Me? A .NET Developer’s Guide to AI
+# You've Been Organizing Your Code Wrong: A C# Developer's Intro to Vertical Slice Architecture
 Talk by Jonathan "J." Tower
 
 Ditch the layers and jump into the world of Vertical Slice Architecture—an architecture where features reign supreme! Imagine a codebase where the organization revolves around capabilities and not tangled technical layers. This talk will be your map to this thrilling new world.
