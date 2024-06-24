@@ -51,23 +51,23 @@ public static class CreateReservation
         public DateTime CheckOutDate { get; set; }
     }
 
-public class Validator : AbstractValidator<Command>
-{
-    public Validator()
+    public class Validator : AbstractValidator<Command>
     {
-        RuleFor(r => r.RoomId).NotEmpty().GreaterThanOrEqualTo(1);
-        RuleFor(r => r.GuestFirstName).NotEmpty();
-        RuleFor(r => r.GuestLastName).NotEmpty();
-        RuleFor(r => r.CheckInDate)
-            .NotEmpty()
-            .Must(date => date.Date >= DateTime.Now.Date)
-                .WithMessage("Check-in date must be today or a future date.");
-        RuleFor(r => r.CheckOutDate)
-            .NotEmpty()
-            .Must((model, checkOutDate) => checkOutDate.Date > model.CheckInDate.Date)
-                .WithMessage("Check-out date must be after the check-in date.");
+        public Validator()
+        {
+            RuleFor(r => r.RoomId).NotEmpty().GreaterThanOrEqualTo(1);
+            RuleFor(r => r.GuestFirstName).NotEmpty();
+            RuleFor(r => r.GuestLastName).NotEmpty();
+            RuleFor(r => r.CheckInDate)
+                .NotEmpty()
+                .Must(date => date.Date >= DateTime.Now.Date)
+                    .WithMessage("Check-in date must be today or a future date.");
+            RuleFor(r => r.CheckOutDate)
+                .NotEmpty()
+                .Must((model, checkOutDate) => checkOutDate.Date > model.CheckInDate.Date)
+                    .WithMessage("Check-out date must be after the check-in date.");
+        }
     }
-}
 
     internal sealed class Handler : IRequestHandler<Command, Result<Guid>>
     {

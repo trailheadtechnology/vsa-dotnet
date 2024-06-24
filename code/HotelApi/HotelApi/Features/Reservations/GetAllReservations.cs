@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Hotel.Api.Database;
 using Hotel.Api.Shared;
 using Hotel.Api.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Hotel.Api.Features.Reservations;
 
@@ -17,7 +18,7 @@ public class GetAllReservationsEndpoint : ICarterModule
 
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("api/reservations", async (ISender sender, Request request) =>
+        app.MapGet("api/reservations", async (ISender sender, [AsParameters]Request request) =>
         {
             var query = new GetAllReservations.Query
             {
