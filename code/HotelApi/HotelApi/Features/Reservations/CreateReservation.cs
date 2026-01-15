@@ -14,8 +14,8 @@ public class CreateReservationEndpoint : ICarterModule
     {
         public Guid Id { get; set; }
         public int RoomId { get; set; }
-        public string GuestFirstName { get; set; }
-        public string GuestLastName { get; set; }
+        public string GuestFirstName { get; set; } = "";
+        public string GuestLastName { get; set; } = "";
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
     }
@@ -45,8 +45,8 @@ public static class CreateReservation
     {
         public Guid Id { get; set; }
         public int RoomId { get; set; }
-        public string GuestFirstName { get; set; }
-        public string GuestLastName { get; set; }
+        public string GuestFirstName { get; set; } = "";
+        public string GuestLastName { get; set; } = "";
         public DateTime CheckInDate { get; set; }
         public DateTime CheckOutDate { get; set; }
     }
