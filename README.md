@@ -1,9 +1,12 @@
-# You've Been Organizing Your Code Wrong: A C# Developer's Intro to Vertical Slice Architecture
+# Layers Are for Lasagna : Embracing Vertical Slice Architecture
 Talk by Jonathan "J." Tower
 
-Ditch the layers and jump into the world of Vertical Slice Architecture—an architecture where features reign supreme! Imagine a codebase where the organization revolves around capabilities and not tangled technical layers. This talk will be your map to this thrilling new world.
+Is your codebase fragile, where one small change risks breaking something unexpected? That fragility often comes from layered or “lasagna” architectures that scatter logic across controllers, services, repositories, and models. Touching one feature means touching several layers, and every change feels slow and risky. Vertical Slice Architecture takes a different approach.
 
-From defining service boundaries at a macro level to orchestrating individual feature capabilities at a micro level, this session will elucidate how Vertical Slice Architecture fosters code organization that aligns seamlessly with system functionality. Gain insights into crafting a cohesive codebase, optimizing code management, and fostering more easy adaptability in your evolving software systems.
+Instead of organizing by technical layer, it organizes by feature. Each slice contains everything it needs, from input to persistence, and stands largely on its own. This makes features easier to find, easier to understand, and easier to change without worrying about unintended ripple effects. It also gives you the freedom to pick the right implementation for each case, whether that means EF Core, Dapper, or raw SQL.
 
-## Free Consultation Offer
+In this talk, we will explore how to shift from rigid layered designs to feature-oriented slices, and how that shift creates codebases that grow more naturally and stay easier to maintain. Through practical .NET examples, you will see how vertical slicing encourages clarity, flexibility, and confidence when building or refactoring applications. Layers might be fine for lasagna, but your architecture deserves something better.
+
+
+## Let's Talk:
 https://bit.ly/th-offer
