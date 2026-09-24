@@ -8,5 +8,5 @@ Instead of organizing by technical layer, it organizes by feature. Each slice co
 In this talk, we will explore how to shift from rigid layered designs to feature-oriented slices, and how that shift creates codebases that grow more naturally and stay easier to maintain. Through practical .NET examples, you will see how vertical slicing encourages clarity, flexibility, and confidence when building or refactoring applications. Layers might be fine for lasagna, but your architecture deserves something better.
 
 
-## Let's Talk:
-https://bit.ly/th-offer
+## Schedule Time With Me
+https://trailheadtechnology.com/connect/?t=vsa-dotnet
